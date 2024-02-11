@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Registery</title>
+  <style>
+    *{
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1, p, label{
+      color: white;
+    }
+
+    input[type="text"]{
+      width: 500px;
+      border-radius: 10px;
+      padding: 10px;
+    }
+
+    input[type="radio"]{
+      margin: 10px 0;
+    }
+
+    input[type="submit"]{
+      padding: 15px;
+    }
+
+    fieldset{
+      border: none;
+    }
+
+    label{
+      margin: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div id="header" style="background-color: #2A2C2E; margin: 15px; padding: 20px; border-radius: 10px;">
+    <img src="./IMG/logo (1).png" alt="logo">
+  </div>
+  <div id="main" style="background-color: #2A2C2E; margin: 15px; padding: 20px; border-radius: 10px;">
+    <h1>REGISTER YOUR BOOK</h1>
+    <form method="post" action="#">
+      <fieldset id="bookDetails" style="display: flex; flex-direction: column;">
+        <div style="display: flex; flex-direction: row; align-items: center; margin: 5px;">
+          <p style="margin-right: 10px;">Book Details</p><hr style="border-width: 2px; border-color: white; flex-grow: 1; height: 1px;">
+        </div> 
+        <label for="title">Title <input type="text" name="title" id="title" placeholder="Your book title here. E.g. Harry Potter and the fantastic bootcamp"></label>
+        <label for="genre">Genre  <input type="text" name="genre" id="genre" placeholder="Your book genre here. E.g. Fantasy"></label>
+        <label for="author">Author <input type="text" name="author" id="author" placeholder="Your book author here. E.g. J.K. Rowling"></label>
+        <label for="publisher">Publisher <input type="text" name="publisher" id="publisher" placeholder="Publisher of the book. E.g. Pustaka Melang"></label>
+        <label for="year">Year Published <input type="text" name="year" id="year" placeholder="1994"></label>
+        <label for="availability">Availability Online<input type="radio" name="availability" id="availability" checked>In Store<input type="radio" name="availability" id="availability">Online and In Store<input type="radio" name="availability" id="availability"></label>
+        <label for="pages">Pages <input type="text" name="pages" id="pages" placeholder="514"></label>
+        <label for="language">Language <input type="text" name="language" id="language" placeholder="Languange used in the book. E.g. Armenian"></label>
+      </fieldset>
+      <fieldset id="registreeDetails" style="display: flex; flex-direction: column;">
+        <div style="display: flex; flex-direction: row; align-items: center; margin: 5px;">
+          <p style="margin-right: 10px;">Registree Details</p><hr style="border-width: 2px; border-color: white; flex-grow: 1; height: 1px;">
+        </div>
+        <label for="name">Name <input type="text" name="name" id="name" placeholder="Your name. E.g. Taib Mahmud"></label>
+        <label for="emailRegistree">Email <input type="text" name="emailRegistree" id="emailRegistree" placeholder="Your Email. E.g. RaghadKurdiTaib@opera.com"></label>
+      </fieldset>
+      <fieldset style="display: flex; flex-direction: column;">
+        <label for="conformation"><input type="radio" name="conformation" id="conformation"> I hereby agree to follow all rules and confirmed that all details are accurate</label>
+        <input type="submit" value="SAVE YOUR BOOK" style="background-color:#F4CE47; color: black; border-radius: 10px;">
+      </fieldset>
+    </form>
+  </div>
+  <div id="footer1" style="display: flex; flex-direction: row; background-color: #2A2C2E; justify-content: space-between; padding: 15px;">
+    <img src="./IMG/logo (1).png" alt="logo">
+    <div id="socials" style="color: white;">socials</div>
+  </div>
+  <div id="footer2" style="display: flex; flex-direction: row; background-color: #000000; justify-content: space-between; padding: 9px;">
+    <div id="tncAndPolicy" style="display: flex; flex-direction: row;">
+      <div id="tnc" style="color: white; margin-left: 15px;">Terms and conditions</div>
+      <div id="policy" style="color: white; margin-left: 15px;">Privacy policy</div>
+    </div>
+    <div id="telAndEmail" style="display: flex; flex-direction: row;">
+      <div id="tel" style="color: white; margin-right: 15px;">+44 1332 412251</div>
+      <div id="email" style="color: white; margin-right: 15px;">support@bbokshelf.com</div>
+    </div>
+  </div>
+</body>
+</html>

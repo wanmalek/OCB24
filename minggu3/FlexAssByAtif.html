@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flex Assignment "step by step".</title>
+  <style>
+    *{
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    div{
+      border: 1px solid red;
+    }
+
+    body > div{ /*div yang betul2 lepas element body. (in this case the 4 main divs)*/
+      width: 100%; /*so it takes all the left and right spaces. why we don't use flex-stretch is bcs we want center.
+                    (we set the max-width, so bila dia expand more than the max width, the div will not be ke kanan or kiri
+                    instead it'll terapung tengah2.*/
+    }
+
+    #header{
+      display: flex;
+      flex-direction: row;
+      max-width: 1200px; 
+      background-color: #2A2C2E; 
+      justify-content: space-between; 
+      align-items: center; 
+      gap: 16px; 
+      padding: 16px; 
+      border-radius: 20px;
+    }
+
+    #listing{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap; /*baki nya tu pergi bawah*/
+      flex-grow: 1; /*gives equal height to all the panels so that it'll expand till bottom.*/ 
+    }
+
+    .panel{
+      flex-grow: 1; /*kita nak dia penuhi ruang*/
+      flex-basis: calc(100% / 3); /*kita set 3 row maximum per row*/
+    }
+
+    a{
+      all: unset; /*utk reset default behaviour*/
+      cursor: pointer;
+    }
+
+    #menus > a{
+      color: #ffffff;
+      opacity: 60%;
+      padding: 8px 12px;
+    }
+
+    #menus > a[data-active=true] {
+      color: #F4D867;
+      opacity: 100%;
+    }
+
+    button{
+      all: unset;
+      cursor: pointer;
+    }
+
+  </style>
+</head>
+<body style="display: flex; flex-direction: column; align-items: center; gap: 16px; padding: 16px 8px 0px; min-height: 100vh;">
+  <div id="header">
+    <img src="./IMG/logo (1).png" alt="logo"> <!--syntax= ./namaFolder/picture-->
+    <nav id="menus">
+      <a href="#" data-active="true">Books</a>
+      <a href="#" data-active="false">Authors</a>
+      <a href="#" data-active="false">What to Read?</a>
+      <a href="#" data-active="false">Gift Ideas</a>
+      <a href="#" data-active="false">About Us</a>
+    </nav>
+    <div id="cta">cta</div>
+    <button id="login" style="background-color: #f4ce47; padding: 16px 20px; border-radius: 16px;">Login</button>
+  </div>
+  <div id="banner">Banner</div>
+  <div id="listing">
+    <div class="panel">panel</div>
+    <div class="panel">panel</div>
+    <div class="panel">panel</div>
+    <div class="panel">panel</div>
+    <div class="panel">panel</div>
+    <div class="panel">panel</div>
+    <div class="panel">panel</div>
+    <div class="panel">panel</div>
+    <div class="panel">panel</div>
+  </div>
+  <div id="footer" style="display: flex; flex-direction: column; max-width: 1200px;">
+    <div id="top" style="display: flex; flex-direction: row;">
+      <div id="logo">logo</div>
+      <div id="socials">socials</div>
+    </div>
+    <div id="bottom" style="display: flex; flex-direction: row;">
+      <div id="tnc">tnc</div>
+      <div id="policy">policy</div>
+      <div id="no">no</div>
+      <div id="email">email</div>
+    </div>
+  </div>
+</body>
+</html>

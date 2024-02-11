@@ -1,0 +1,57 @@
+
+- buat 4 divs utama
+- tambah style dekat head, tambah selector element div, property border: 1px solid red;
+- tambah css reset: 
+*{box-sizing: border-box;
+  margin: 0;
+  padding: 0;}
+- flex & flex-direction at body (parent for 4 main divs)
+- tambah children into first div, and set display and flex-direction
+- third div: tambah 9 divs. and set flex.
+- 9 divs (children) tu all set flex-grow: 1 (spread evenly)
+- set flex-wrap: wrap to 3rd div (parent) sebab dia ada turun kebawah
+- set children flex-basis: calc(100% / 3) [kita nak max 3 je each row, lain semua kebawah.
+- letak 2 divs utk footer (top and botom), set flex to footer. and then set childrens to top and bottom footer. set flex to footer top and bottom
+- align-items by default akan stretch. so we apply align-items at body so that all will centered.
+- tambah gap pada body, so all the main divs got spaces between them.
+- gap tak apply gap to above 1st main div, so kena letak padding manually, to body itself. (actually gap property gives gap between content itself, while the sides [top right bottom left] got no gap.
+- apply border: 1px solid blue, and u see the body mmg ngam2 follow tinggi all the contents sahaja, tak sampai bawah.
+- apply min-height: 100vh to body (kalau height saja dia fix)[vh means viewport height = viewable = display][100vh = 100% display.]. & now the blue border cover till the end of the page.
+- dah boleh buang blue border tu dah.
+- kita letak footer tu kat bawah. samaada by:
+1. margin-top: auto; pada footer (kita taktau berapa px antara footer dan line bawah so kita set auto so that dia akan amik semua ruang yang available = automatically tolak footer sampai ke bawah. [THIS ONE GIVES SPACES BETWEEN LISTINGS AND FOOTER]
+2. kita letak flex-grow: 1; pada listing so that it'll expand to below taking all the remaining spaces. [THIS ONE, ALL PANELS EXPAND EQUALLY TILL THE FOOTER PUSHED TO THE END.]
+- set width: 100% to the main 4 divs, and give max-width: 1200px(follow figma); to header and footer divs.
+
+-----NOW PART LAYOUT SETEL, WE ENTER STYLING PART.-----
+
+1. 1st div (child of header div) buang, then ganti img element.
+2. masukkan logo.
+3. masukkan background-color header.
+4. justify-content: space-between; @ header so all the children will be evenly spread in the header.
+5. declare gap at header as a safe measures so that when the windows shrinked, there's still fixed spaces between the children. (recommended gap with justify-content)
+6. tambah 5 <a> at menus.
+7. tukar warna font menus
+8. tukar div menus to ke nav.
+9. a{all: unset;} utk hilangkan line under <a>. disebabkan cursor: pointer; also ter reset, tambah cursor: pointer;
+10. set padding to the <a> at #menus, (not <a> directly because kat tempat lain kita nak setting <a> lain.
+11. tambah align-items: center; (sebab kita pakai flex) at header so semua items inside are aligned vertically.
+12. (skip cta) tukar div ke button terus for login. and then set all: unset; so it appears as a word instead of a real button, & tambah cursor: pointer;. 
+13. background-color and tambah padding at button element.
+14. declare padding at header itu sendiri.
+15. tambah border-radius at button and header.
+16. data attributes= styling specifics when specific action done. (#id-name > a[data-active=true]{
+color: #f4d867;) then tambah attribute data-active="true" at the <a>. (MAKE SURE THERE'S NO SPACE BETWEEN a AND []!!) and set back the opacity to 100%.
+17. set selain <a> books; attribute data-active"false".
+tambah padding to body so there's a space between window side and elements. (and even we shrink the window)
+18. (skip banner) move to panels.
+
+-----MEDIA QUERY--------
+
+1. @media (max-width: 992px) {
+	#header {
+		flex-direction: column
+		}
+  }
+
+

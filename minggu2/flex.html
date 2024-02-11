@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flex</title>
+  <style>
+    .box{
+      border: 10px solid red;
+      min-height: 50px;
+      padding: 20px;
+      margin: 2px;
+    }
+  </style>
+</head>
+<body>
+  <div class="box" style="height: 2000px; display: flex; flex-direction: column; border-color: blue; align-items: start ;">
+    <div class="box" style="border-color: red; display: flex; flex-direction: column;">
+      <div class="box" style="border-color: green;"></div>
+      <div class="box" style="border-color: green; display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center;">
+        <div class="box" style="border-color: purple;"></div>
+        <div class="box" style="border-color: purple;"></div>
+        <div class="box" style="border-color: purple;"></div>
+        <div class="box" style="border-color: purple;"></div>
+        <div class="box" style="border-color: purple;"></div>
+      </div>
+      <div class="box" style="border-color: green; display: flex; flex-direction: row; flex-wrap: wrap;">
+        <div class="box" style="border-color: cyan; ;"></div>
+        <div class="box" style="border-color: cyan; display: flex; flex-direction: column;">
+          <div class="box" style="border-color: brown;"></div>
+          <div class="box" style="border-color: brown;"></div>
+          <div class="box" style="border-color: brown;"></div>
+        </div>
+      </div>
+    </div>
+    <div class="box" style="border-color: red;">
+      2
+    </div>
+  </div>
+</body>
+</html>
